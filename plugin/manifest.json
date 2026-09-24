@@ -1,0 +1,4 @@
+{
+ "Name":"WoW Forever Macros","Author":"cooldead","Version":"1.0.0","Description":"Forever class abilities, offline icons and keyboard macros","Category":"WoW Forever","Icon":"icons/class_warrior","CategoryIcon":"icons/class_warrior","OS":[{"Platform":"linux"}],"CodePathLin":"plugin.mjs","CodePath":"plugin.mjs","PropertyInspectorPath":"inspector.html",
+ "Actions":[{"UUID":"com.cooldead.wowforever.macro","Name":"Ability / Macro","Icon":"icons/class_mage","Tooltip":"Choose a Forever ability icon and keyboard shortcut","Controllers":["Keypad"],"States":[{"Image":"icons/inv_misc_questionmark","Title":""}],"DisableAutomaticStates":true}]
+}

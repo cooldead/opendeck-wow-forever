@@ -1,0 +1,10 @@
+import {loadRuntime} from './runtime.mjs';
+const args={}; for(let i=2;i<process.argv.length;i+=2) args[process.argv[i]]=process.argv[i+1];
+if(!/^\d+$/.test(args['-port']||'')||!args['-pluginUUID']||!args['-registerEvent']) throw new Error('Launch this plugin from OpenDeck.');
+let ws;
+const runtime=await loadRuntime(message=>{if(ws.readyState===WebSocket.OPEN) ws.send(JSON.stringify(message));});
+ws=new WebSocket(`ws://127.0.0.1:${args['-port']}`);
+ws.addEventListener('open',()=>ws.send(JSON.stringify({event:args['-registerEvent'],uuid:args['-pluginUUID']})));
+ws.addEventListener('message',event=>{try {runtime.handle(JSON.parse(event.data)).catch(console.error);} catch(e){console.error(e);}});
+ws.addEventListener('error',e=>console.error('OpenDeck connection failed',e.message));
+ws.addEventListener('close',()=>process.exit(0));

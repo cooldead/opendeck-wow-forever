@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>WoW Forever Macros</title><link rel="stylesheet" href="style.css"></head>
+<body><header><span class="eyebrow">WORLD OF WARCRAFT</span><h1>Forever Macros</h1><p>Your abilities. One button away.</p></header>
+<div id="error" role="alert" hidden></div>
+<main>
+<label for="className">Class</label><select id="className"></select>
+<div class="filters"><div><label for="kind">Show</label><select id="kind"><option value="">All class icons</option><option value="Ability">Abilities</option><option value="Talent">Talents</option><option value="Racial">Racials</option><option value="Legacy">Legacy perks</option><option value="Library">Full icon library</option></select></div><div><label for="search">Search</label><input id="search" type="search" placeholder="Ability or icon name"></div></div>
+<div class="resultbar"><span id="count" role="status">Loading icons…</span><div><button id="previous" aria-label="Previous icons">‹</button><button id="next" aria-label="Next icons">›</button></div></div>
+<div id="icons" role="group" aria-label="Ability icons"></div>
+<section class="selection"><img id="selectedIcon" src="icons/inv_misc_questionmark.jpg" alt="Selected icon"><div><strong id="selectedName">Choose an ability</strong><small id="selectedDetail">Select any icon above</small></div></section>
+<p id="description"></p>
+<label for="title">Button label <span class="optional">optional</span></label><input id="title" maxlength="80" placeholder="Leave blank for icon only">
+<section class="binding"><label for="key">Keyboard action</label><div class="keyrow"><select id="key"><option value="">Choose a key</option></select><button id="record">Record keys</button></div>
+<div class="modifiers"><label><input type="checkbox" id="ctrl"> Ctrl</label><label><input type="checkbox" id="shift"> Shift</label><label><input type="checkbox" id="alt"> Alt</label></div><output id="chord">No key assigned</output></section>
+<details><summary>In-game macro text</summary><p>Create a macro in WoW, paste this text, put it on your action bar, and bind it to the keyboard action above.</p><button id="generate">Generate /cast macro</button><label for="macroText">Macro text</label><textarea id="macroText" rows="5" spellcheck="false" placeholder="#showtooltip&#10;/cast Ability Name"></textarea><button id="copy">Copy text</button><span id="copyStatus" role="status"></span></details>
+<details><summary>Keyboard output</summary><label for="backend">Backend</label><select id="backend"><option value="xdotool">X11 / Wine on XWayland (xdotool)</option><option value="ydotool">Native Wayland (ydotool)</option></select><p>The game must have focus. Native Wayland needs ydotool and a running ydotoold service. One press sends one shortcut.</p></details>
+<p id="saveStatus" role="status">Preview mode · open in OpenDeck to save</p>
+</main><footer>Data: <a href="https://talentsforever.com/" target="_blank" rel="noreferrer">Talents Forever</a> · CC BY 4.0<br><span id="version"></span><br>Game artwork © Blizzard Entertainment.</footer>
+<script type="module" src="inspector.mjs"></script></body></html>
