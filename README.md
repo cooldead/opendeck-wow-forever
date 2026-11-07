@@ -2,7 +2,7 @@
 
 Put your **World of Warcraft Forever** abilities on your Stream Deck. Pick a class, choose an ability icon, and set the keyboard shortcut that the button should press.
 
-Works with **OpenDeck on Linux**. Includes **619 offline icons** for all nine Forever classes, plus talents, racials, and Legacy perks.
+Works with **OpenDeck on Linux**. Includes **642 offline icons** for all nine Forever classes, plus talents, racials, and Legacy perks.
 
 [**Download the plugin**](https://github.com/cooldead/opendeck-wow-forever/releases/latest) · [OpenDeck](https://github.com/nekename/OpenDeck) · [Talents Forever](https://talentsforever.com/)
 
@@ -115,7 +115,7 @@ The bundled data is a snapshot. Check for a newer release or follow the data-upd
 
 Ability and talent data comes from [Talents Forever](https://talentsforever.com/), by Chris Baldwin, under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-The included snapshot is dated **September 20, 2026**, for Forever beta build **1.60.1.69876**. It contains **1,317 entries and all 619 icons referenced by that source**. Some source descriptions use demo or Classic fallback text. This is not a collection of every texture in the game client.
+The included snapshot is dated **November 4, 2026**, for Forever launch build **1.60.1.70755** (after the Paladin, Druid and Rogue reworks). It contains **1,319 entries and all 623 icons referenced by that source**, plus 19 icons from the earlier snapshot kept so buttons made with retired abilities still show their icon. Some source descriptions use demo or Classic fallback text. This is not a collection of every texture in the game client.
 
 World of Warcraft names, game text, and artwork belong to Blizzard Entertainment. This is an unofficial fan project. See [NOTICE.md](NOTICE.md) for full attribution.
 

@@ -63,6 +63,9 @@ def scan(obj):
         for x in obj: scan(x)
 scan(src)
 for book in src['spellbooks'].values(): icons.update(book['icons'].values())
+# Keep icons from earlier snapshots: buttons saved with a retired ability's icon would
+# otherwise fall back to the question mark (runtime.mjs only draws catalog icons).
+icons.update(p.stem for p in (ROOT/'plugin/icons').glob('*.jpg'))
 missing = []
 def download(icon):
     path = ROOT/'plugin/icons'/f'{icon}.jpg'
